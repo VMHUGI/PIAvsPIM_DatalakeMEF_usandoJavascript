@@ -1,0 +1,35 @@
+-node installation
+--node install
+--PS C:\Users\Lenovo> npm --version
+npm notice
+npm notice New minor version of npm available! 7.6.3 -> 7.7.0
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v7.7.0
+npm notice Run npm install -g npm@7.7.0 to update!
+npm notice
+7.6.3
+PS C:\Users\Lenovo> npm install oracledb
+npm notice
+npm notice New minor version of npm available! 7.6.3 -> 7.7.0
+npm notice Changelog: https://github.com/npm/cli/releases/tag/v7.7.0
+npm notice Run npm install -g npm@7.7.0 to update!
+npm notice
+
+added 1 package, and audited 2 packages in 2s
+
+found 0 vulnerabilities
+
+-- oracle client install
+https://www.oracle.com/database/technologies/instant-client/macos-intel-x86-downloads.html
+https://www.oracle.com/database/technologies/instant-client/winx64-64-downloads.html
+
+const oracledb = require('oracledb');
+oracledb.initOracleClient({configDir: 'C:\\Users\\Lenovo\\Documents\\MEF\\XYProject\\DesktopApp\\instantclient_19_10'});
+
+try {oracledb.initOracleClient({configDir: 'C:\\Users\\Lenovo\\Documents\\MEF\\XYProject\\DesktopApp\\instantclient_19_10});} catch (err) {console.error('Whoops!');console.error(err);process.exit(1);}
+
+
+npm init -y
+
+ npm i electron electron-reload
+
+npm install --save @electron/remote
