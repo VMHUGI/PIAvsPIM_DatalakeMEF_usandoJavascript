@@ -16,9 +16,9 @@ async function init() {
     try {
   
       await oracledb.createPool({
-        user          : "SCH_UNIVERSAL",
-        password      : "un1v4rs4l20",
-        connectString : "10.5.112.35:1521/dgpp",
+        user          : "Usuario",
+        password      : "Password",
+        connectString : "IP_DATA_BASE:1521/dgpp",
         poolIncrement : 0,
         poolMax       : 5,
         poolMin       : 5,
@@ -99,27 +99,20 @@ async function getQueryResult(tablename){
 
 
 async function getQueryResultPIAPIM(funcion){
-    //let result = await conn.execute(`SELECT * FROM GASTOHISTNH`);
-    //return await conn.execute(`SELECT * FROM GASTOHISTNH`);
-    //return result
-    //connection = await oracledb.getConnection();  // get a connection from the default pool
-    //const result = await connection.execute(`SELECT COUNT(*) FROM `+tablename);
     let connection;
     let result;
     try {
 
-        connection = await oracledb.getConnection(dbconfig);  // get a connection from the default pool
+        connection = await oracledb.getConnection(dbconfig); 
         result = await connection.execute('SELECT G.ANO_EJE,G.FUNCION,G.MONTO_PIA,G.MONTO_PIM,G.MONTO_DEVENGADO,F.NOMBRE FROM GASTOHISTNH G,FUNCION F WHERE G.FUNCION= F.FUNCION AND G.FUNCION='+funcion+' ORDER BY G.ANO_EJE');
         
-        //displayResults(response, result);  // do something with the results
-
     } catch (err) {
         console.log("<p>Error: " + "ERRO DE CONECCION" + "</p>");
     } finally {
         if (connection) {
             try {
                 console.log("<p>Finalmente: " + "soltando la conecciOn" + "</p>");
-                await connection.close();  // always release the connection back to the pool
+                await connection.close();  
                 
             } catch (err) {
                 console.error(err);
