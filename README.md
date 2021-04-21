@@ -1,6 +1,8 @@
 
 
-# JEjemplo de Monto PIA vs Monto PIM vs Monto Devengado en los últimos años en un Dashboard de Escritorio Javascript
+# Ejemplo en Javascript para extraer datos de una base de datos Oracle
+
+Monto PIA vs Monto PIM vs Monto Devengado en los últimos años en un Dashboard de Escritorio Javascript
 El presente ejemplo hace una consulta de una tabla en el DataLake MEF y muestra un gráfico de comparativo de ciertos parámetros asociados.
 
 # Estructura Folder:
